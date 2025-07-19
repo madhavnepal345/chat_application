@@ -2,8 +2,8 @@ import os
 from functools import lru_cache
 from typing import List, Optional
 
-from pydantic import BaseSettings, PostgresDsn, validator
-
+from pydantic_settings import BaseSettings
+from pydantic import PostgresDsn, validator
 
 class Settings(BaseSettings):
     PROJECT_NAME: str = "Chat Application"
