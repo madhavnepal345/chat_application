@@ -7,10 +7,10 @@ from sqlalchemy.orm import Session
 from app.crud.chat import create_message, get_messages
 from app.database import get_db
 from app.dependencies.auth import get_current_active_user
-from app.dependencies.websocket import get_websocket_user
+from app.dependencies.webshocket import get_websocket_user
 from app.schemas.auth import UserInDB
 from app.schemas.chat import Message, MessageCreate, MessageWithSender
-from app.utils.websocket_manager import websocket_manager
+from app.utils.webshocket_manager import websocket_manager
 
 
 router = APIRouter(prefix="/chat", tags=["chat"])
